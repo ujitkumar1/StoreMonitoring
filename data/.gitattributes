@@ -1,0 +1,4 @@
+*.csv filter=lfs diff=lfs merge=lfs -text
+store-status.csv filter=lfs diff=lfs merge=lfs -text
+Menu-hours.csv filter=lfs diff=lfs merge=lfs -text
+timezone.csv filter=lfs diff=lfs merge=lfs -text
