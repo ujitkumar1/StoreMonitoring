@@ -97,6 +97,16 @@ class ReportEntry(db.Model):
 
 
 class ReportTask(db.Model):
+    """
+    Represents a report task in the database.
+
+    Attributes:
+        id (int): The unique identifier for the report task.
+        report_id (str): The unique identifier for the associated report.
+        status (str): The current status of the report task (e.g., "Running", "Complete").
+        timestamp (datetime): The timestamp indicating when the report task was created.
+
+    """
     id = db.Column(db.Integer, primary_key=True)
     report_id = db.Column(db.String, unique=True, nullable=False)
     status = db.Column(db.String, nullable=False)
