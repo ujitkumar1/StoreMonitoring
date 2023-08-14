@@ -73,22 +73,27 @@ This will start the Redis server and the Celery worker to enable asynchronous ta
     - ```{"Status": "Completed","Path": "report/5e379ee1.csv"}```
 
 ### logic for computing the hours
-1. The function calculate_uptime_downtime is responsible for calculating the uptime and downtime of a store within a specific time period.
 
-2. It takes three arguments: store_id (the ID of the store), start_time (the beginning of the time period), and end_time (the end of the time period).
+1. The function calculate_uptime_downtime is responsible for calculating the uptime and downtime of a store within a
+   specific time period.
+
+2. It takes three arguments: store_id (the ID of the store), start_time (the beginning of the time period), and
+   end_time (the end of the time period).
 
 3. Inside the function:
 
- - It first retrieves the business hours of the store using the MenuHours table from the database.
- - It initializes variables to keep track of the total business hours, total uptime, and total downtime.
+- It first retrieves the business hours of the store using the MenuHours table from the database.
+- It initializes variables to keep track of the total business hours, total uptime, and total downtime.
 
-4. The function then goes through each business hour for the store and checks if there's an overlap between the business hour and the specified time period.
+4. The function then goes through each business hour for the store and checks if there's an overlap between the business
+   hour and the specified time period.
 
 5. If an overlap exists:
 
- - It calculates the duration of the overlap in seconds.
- - Adds this overlap duration to the total business hours.
- - It simulates retrieving the store's status during this overlap from the get_store_status function. If the store is active during this time, it adds the overlap duration to the total uptime.
+- It calculates the duration of the overlap in seconds.
+- Adds this overlap duration to the total business hours.
+- It simulates retrieving the store's status during this overlap from the get_store_status function. If the store is
+  active during this time, it adds the overlap duration to the total uptime.
 
 6. Finally, the function calculates the total downtime by subtracting the total uptime from the total business hours.
 
@@ -96,7 +101,8 @@ This will start the Redis server and the Celery worker to enable asynchronous ta
 
 8. If any error occurs during this process, it is caught, and an error message is logged.
 
-This function essentially helps determine the time the store was operational (uptime) and the time it was not operational (downtime) within a given time period, considering its business hours and status.
+This function essentially helps determine the time the store was operational (uptime) and the time it was not
+operational (downtime) within a given time period, considering its business hours and status.
 
 ### Contact:
 

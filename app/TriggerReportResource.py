@@ -4,9 +4,9 @@ import random
 from flask_restful import Resource
 
 from app import db
+from app.Task import generate_reports_task
 from app.log import log
 from app.models import TimeZone, ReportTask
-from app.Task import generate_reports_task
 
 
 class TriggerReportResource(Resource):

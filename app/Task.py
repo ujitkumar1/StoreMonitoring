@@ -1,7 +1,7 @@
-from app.ReportUtils import ReportUtils
 from app import app
 from app import celery
 from app import db
+from app.ReportUtils import ReportUtils
 from app.log import log
 from app.models import TimeZone, ReportTask
 

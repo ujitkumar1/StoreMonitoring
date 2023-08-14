@@ -12,6 +12,7 @@ class ReportUtils:
      Attributes:
          None
      """
+
     @staticmethod
     def generate_and_store_report_data(report_id, store, current_timestamp):
         """

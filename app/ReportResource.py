@@ -13,6 +13,7 @@ class ReportResource(Resource):
     Attributes:
         None
     """
+
     def get(self, report_id):
         """
         Handles the GET request for report data.
