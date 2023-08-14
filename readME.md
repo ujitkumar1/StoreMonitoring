@@ -36,6 +36,11 @@ project without any issues.
 ```
 python main.py
 ```
+or 
+
+```
+python3 main.py
+```
 
 This will start the application, and you should be able to use it. (or) Directly run the main.py file by defalt the url
 of application would be : http://127.0.0.1:5000
