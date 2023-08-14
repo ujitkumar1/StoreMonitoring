@@ -47,7 +47,7 @@ class ReportResource(Resource):
                         f.write(csv_data)
 
                 log.debug("Report with ID %s is complete", report_id)
-                return {'Status': "Complete", "File Path": f"csv_file_path/{csv_filename}"}
+                return {'Status': "Complete", "File Path": f"{csv_file_path}/{csv_filename}"}
         except Exception as e:
             log.error("An error occurred while processing report request: %s", str(e))
             return {"error": "An error occurred"}, 500
