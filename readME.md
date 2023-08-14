@@ -104,6 +104,10 @@ This will start the Redis server and the Celery worker to enable asynchronous ta
 This function essentially helps determine the time the store was operational (uptime) and the time it was not
 operational (downtime) within a given time period, considering its business hours and status.
 
+### Project Demo Link
+
+Google Drive Video Link : https://drive.google.com/file/d/1u8gWrd5zZty1A4ON-dEkecN029naHln4/view?usp=sharing
+
 ### Contact:
 
 **Name** : Ujit Kumar
